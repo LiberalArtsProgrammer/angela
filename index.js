@@ -3,6 +3,7 @@ const client = new Discord.Client();
 const prefix = "!"
 const config = require('./config.json')
 const fs = require('fs');
+const {PointCount} = require('./Function/PointCount')
 client.commands = new Discord.Collection();
 
 client.once('ready', () => {
@@ -18,6 +19,8 @@ for (const file of commandFiles) {
 }
 
 client.on('message', message => {
+  if(message.author.bot === false)
+    PointCount(message)
   if (message.content.startsWith(prefix) && !message.author.bot){
     const args = message.content.slice(prefix.length).trim().split(' ');
     const command = args.shift().toLowerCase();

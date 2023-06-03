@@ -13,7 +13,7 @@
     "axios": "^1.4.0",
     "cheerio": "^1.0.0-rc.12",
     "discord.js": "^12.5.3",
-    "firebase": "^9.22.1",
+    "firebase-admin": "^11.9.0",
     "module": "^1.2.5",
     "node-fetch": "^2.6.11"
   }
