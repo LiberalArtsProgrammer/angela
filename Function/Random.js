@@ -1,4 +1,4 @@
-function RandomMachine(){
+function RandomMachine(){ // 랜덤 포인트 생성
   const Random = Math.floor((Math.random() * 100));
   if(Random <= 40){
     return 1;

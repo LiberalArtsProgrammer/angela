@@ -16,7 +16,7 @@ async function updateRanking(db, message) {
 
         if (userData.rank > rank) {
           batch.update(userRef, { rank: rank });
-          message.reply(`${doc.data().name}님의 랭크가 ${rank}으로 상승!`);
+          message.reply(`${doc.data().name}님의 랭크가 ${rank}위으로 상승!`);
         }
   
         rank++;

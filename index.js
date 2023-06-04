@@ -8,7 +8,7 @@ client.commands = new Discord.Collection();
 
 client.once('ready', () => {
 	console.log('Ready!');
-    client.user.setActivity("Lobotomy Corporation", { type: 'PLAYING' });
+  client.user.setActivity("Lobotomy Corporation", { type: 'PLAYING' });
 });
 
 const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('.js'));

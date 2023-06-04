@@ -6,10 +6,10 @@ const { updateRanking } = require('./Ranking');
 admin.initializeApp({
     credential: admin.credential.cert(serviceAccount)
 });
-const db = admin.firestore();
+const db = admin.firestore(); //DB 설정
 
 function PointCount(message){
-  updateRanking(db, message);
+  updateRanking(db, message);//실시간 랭킹
   const userRef = db.collection('users').doc(message.author.id);
   // 데이터 조회하기
   userRef.get().then(doc => {
@@ -19,7 +19,7 @@ function PointCount(message){
         userRef.update({
           level: NowLevel
         });
-        message.channel.send(`${doc.data().name}님 축하합니다. ${NowLevel}레벨이 되었습니다!`)
+        message.reply(`${doc.data().name}님 축하합니다. ${NowLevel}레벨이 되었습니다!`)
       }
 
 		  userRef.update({
