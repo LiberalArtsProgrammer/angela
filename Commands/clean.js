@@ -1,6 +1,6 @@
 module.exports = {
 	name: '청소',
-	description: '청소 명렁어.',
+	description: '청소 명령어.',
 	execute(message, args) {
 		if (!message.member.hasPermission("MANAGE_MESSAGES")) {
 			return message.channel.send("권한이 없습니다.");

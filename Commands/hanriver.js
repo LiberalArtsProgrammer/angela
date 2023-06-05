@@ -2,7 +2,7 @@ const axios = require('axios');
 
 module.exports = {
 	name: '한강물온도',
-	description: 'Ping!',
+	description: '한강물온도!',
 	execute(message, args) {
 		const fetchData = async () => {
 			try {
